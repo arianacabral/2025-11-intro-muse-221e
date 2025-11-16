@@ -200,7 +200,7 @@ Pode ser útil atualizar o tempo do sistema para que os registros de **log** pos
 ![](figs/step-timestamp.gif){fig-align="center" width="60%" fig-alt="Estampa de tempo padrão"}
 :::
 
-##
+## Configurações: Definição do Fundo de Escala
 
 :::{.card}
 - Nas configurações gerais (**General**) do painel **Settings**, clicar no botão **Set Date/Time**
