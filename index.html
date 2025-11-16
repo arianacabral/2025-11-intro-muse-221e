@@ -313,7 +313,7 @@
 <p><strong>Como renomear o MuSe?</strong></p>
 <div class="card">
 <ul>
-<li>Nas configurações gerais (<strong>General</strong>) do painel <strong>Settings</strong>, verificar o nome atual do MuSe, clicando no botão <strong>Get Name</strong></li>
+<li>Nas configurações gerais (<strong>General</strong>) da aba <strong>Settings</strong>, verificar o nome atual do MuSe, clicando no botão <strong>Get Name</strong></li>
 </ul>
 <div class="borderbox">
 <div class="quarto-figure quarto-figure-center">
@@ -390,7 +390,7 @@
 <h2></h2>
 <div class="card">
 <ul>
-<li>Nas configurações gerais (<strong>General</strong>) do painel <strong>Settings</strong>, clicar no botão <strong>Set Date/Time</strong></li>
+<li>Nas configurações gerais (<strong>General</strong>) da aba <strong>Settings</strong>, clicar no botão <strong>Set Date/Time</strong></li>
 </ul>
 <div class="borderbox">
 <div class="quarto-figure quarto-figure-center">
@@ -427,6 +427,7 @@
 <section id="configurações-definição-da-escala" class="slide level2">
 <h2>Configurações: Definição da Escala</h2>
 <p>Definir o fundo de escala dos sensores é fundamental para evitar a saturação dos sinais, evitando a perda de dados.</p>
+<p><br></p>
 <p><strong>Qual fundo de escala definir para cada sensor?</strong></p>
 <div class="card">
 <p>A escolha da sensibilidade adequada deve ser feita a partir de um teste prévio. Primeiro, registra-se um movimento com o menor fundo de escala configurado para cada sensor. Depois, analisa-se a forma de onda para identificar possíveis saturações. Caso ocorram, aumenta-se gradualmente o fundo de escala até que os picos dos diferentes sinais fiquem dentro da faixa mensurável de cada sensor.</p>
@@ -451,7 +452,7 @@
 <p><strong>Como definir o fundo de escala?</strong></p>
 <div class="card">
 <ul>
-<li>Em <strong>Config</strong> do painel <strong>Settings</strong>, verificar o fundo de escala definido para cada um dos sensores, clicando no botão <strong>Get Full Scale</strong></li>
+<li>Em <strong>Config</strong> da aba <strong>Settings</strong>, verificar o fundo de escala definido para cada um dos sensores, clicando no botão <strong>Get Full Scale</strong></li>
 </ul>
 </div>
 </section>
@@ -483,11 +484,52 @@
 </div>
 </section></section>
 <section>
+<section id="aquisição-de-sinais" class="title-slide slide level1 center">
+<h1>Aquisição de Sinais</h1>
+
+</section>
+<section id="definição-da-f_s" class="slide level2">
+<h2>Definição da <span class="math inline">\(f_s\)</span></h2>
+<p>Para registrar os sinais com uma boa representação de sua forma de onda e de seu conteúdo espectral, será necessário definir uma frequência de amostragem adequada.</p>
+<p><br></p>
+<div class="card">
+<p>Para evitar <strong><em>aliasing</em></strong>, a frequência de amostragem deve ser pelo menos o dobro da maior frequência presente no sinal.</p>
+</div>
+</section>
+<section id="modo-streaming" class="slide level2">
+<h2>Modo <em>Streaming</em></h2>
+<p>Antes de iniciar a coleta oficial, é importante visualizar os sinais para garantir, por exemplo, que o fundo de escala está adequado.</p>
+<div class="card">
+<p>Para isso, pode-se utilizar o <strong>modo streaming</strong> do MuSe. Assim, é necessário:</p>
+<ul>
+<li>No painel <strong>Acquisition</strong> da aba <strong>Data</strong>, selecionar as variáveis desejadas disponíveis em <strong>Data Mode</strong></li>
+<li>Selecionar a frequência de amostragem no campo <strong>Freq</strong></li>
+<li>Clicar no botão <strong>Stream</strong> para iniciar a visualização dos sinais na tela</li>
+</ul>
+</div>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<div class="card">
+<p>Para finalizar, basta</p>
+<ul>
+<li>Clicar no botão <strong>Stop</strong></li>
+</ul>
+<div class="borderbox">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/step-stream.gif" class="quarto-figure quarto-figure-center" style="width:75.0%" alt="Definindo o fundo de escala de cada sensor"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section>
 <section id="boas-práticas-de-aquisição-de-sinais-inerciais" class="title-slide slide level1 center">
 <h1>Boas Práticas de Aquisição de Sinais Inerciais</h1>
 
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div class="card">
 <ul>
@@ -501,7 +543,7 @@
 </ul>
 </div>
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-17" class="slide level2">
 <h2></h2>
 <div class="card">
 <ul>

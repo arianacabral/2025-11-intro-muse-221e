@@ -157,7 +157,7 @@ Em caso de coletas com mais de um dispositivo, isso pode facilitar a identifica�
 **Como renomear o MuSe?** 
 
 :::{.card}
-- Nas configurações gerais (**General**) do painel **Settings**, verificar o nome atual do MuSe, clicando no botão **Get Name** 
+- Nas configurações gerais (**General**) da aba **Settings**, verificar o nome atual do MuSe, clicando no botão **Get Name** 
 
 ::: borderbox
 ![](figs/step-get-name.gif){fig-align="center" width="70%" fig-alt="Verificando nome atual do dispositivo"}
@@ -203,7 +203,7 @@ Pode ser útil atualizar o tempo do sistema para que os registros de **log** pos
 ##
 
 :::{.card}
-- Nas configurações gerais (**General**) do painel **Settings**, clicar no botão **Set Date/Time**
+- Nas configurações gerais (**General**) da aba **Settings**, clicar no botão **Set Date/Time**
 
 ::: borderbox
 ![](figs/step-set-timestamp.gif){fig-align="center" width="70%" fig-alt="Definindo tempo de referência"}
@@ -227,6 +227,7 @@ Observe que, mesmo fazendo essa configuração, haverá uma diferença de cinco 
 
 Definir o fundo de escala dos sensores é fundamental para evitar a saturação dos sinais, evitando a perda de dados.
 
+<br>
 
 **Qual fundo de escala definir para cada sensor?**
 
@@ -246,7 +247,7 @@ Configurar corretamente o fundo de escala evita saturação dos sinais e previne
 **Como definir o fundo de escala?**
 
 :::{.card}
-- Em **Config** do painel **Settings**, verificar o fundo de escala definido para cada um dos sensores, clicando no botão **Get Full Scale** 
+- Em **Config** da aba **Settings**, verificar o fundo de escala definido para cada um dos sensores, clicando no botão **Get Full Scale** 
 :::
 
 ##
@@ -264,6 +265,45 @@ Configurar corretamente o fundo de escala evita saturação dos sinais e previne
 
 ::: borderbox
 ![](figs/step-set-full-scale.gif){fig-align="center" width="65%" fig-alt="Definindo o fundo de escala de cada sensor"}
+:::
+
+:::
+
+# Aquisição de Sinais
+
+## Definição da $f_s$
+
+Para registrar os sinais com uma boa representação de sua forma de onda e de seu conteúdo espectral, será necessário definir uma frequência de amostragem adequada.
+
+<br>
+
+:::{.card}
+Para evitar ***aliasing***, a frequência de amostragem deve ser pelo menos o dobro da maior frequência presente no sinal.
+:::
+
+## Modo *Streaming*
+
+Antes de iniciar a coleta oficial, é importante visualizar os sinais para garantir, por exemplo, que o fundo de escala está adequado. 
+
+:::{.card}
+
+Para isso, pode-se utilizar o **modo streaming** do MuSe. Assim, é necessário:
+
+- No painel **Acquisition** da aba **Data**, selecionar as variáveis desejadas disponíveis em **Data Mode**
+- Selecionar a frequência de amostragem no campo **Freq**
+- Clicar no botão **Stream** para iniciar a visualização dos sinais na tela
+:::
+
+##
+
+:::{.card}
+
+Para finalizar, basta
+
+- Clicar no botão **Stop**
+
+::: borderbox
+![](figs/step-stream.gif){fig-align="center" width="75%" fig-alt="Definindo o fundo de escala de cada sensor"}
 :::
 
 :::
