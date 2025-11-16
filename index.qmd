@@ -386,4 +386,23 @@ Para obter o arquivo salvo no armazenamento interno do MuSe, é necessário:
 [![](figs/cheatsheet_acc.png){fig-align="center" width="85%" fig-alt="CheatSheet"}](https://doi.org/10.5281/zenodo.4763720)
 :::
 
+## Vamos colocar a mão na massa?
+
+<br>
+
+:::{.card}
+Agora, sua missão é realizar a coleta da aceleração linear, velocidade angular e variação do campo magnético, usando o MuSe, referente a 10 repetições dos movimentos de extensão e flexão do punho, considerando a orientação dos eixos adotada no artigo [Task-Specific Tremor Quantification in a Clinical Setting for Parkinson's Disease](https://doi.org/10.1007/s40846-020-00576-).
+
+:::
+
+## 
+
+Nesta tarefa, é esperado que você:
+
+- posicione a IMU adequadamente no membro do participante
+- faça a aquisição adequada dos sinais, registrando-os internamente no MuSe
+- obtenha o arquivo registrado no armazenamento interno e salve-o em um diretório local em seu computador
+- leia o arquivo salvo, utilizando o R
+- gere o gráfico dos sinais de cada sensor por eixo
+
 ## {background-image="figs/end.gif" background-size="cover"}
