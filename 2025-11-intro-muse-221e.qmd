@@ -1,0 +1,252 @@
+---
+title: "Aprendendo a utilizar o MuSe (221e)"
+format:
+  revealjs:
+    transition: slide
+    transition-speed: fast
+    lang: pt-br
+    chalkboard: true
+    preview-links: auto
+    slide-number: true
+    show-slide-number: all 
+    theme: [serif, custom.scss] #blood #custom.scss
+    footer: "Núcleo de Inovação e Avaliação Tecnológica em Saúde | UFU <br/> 2025"
+---
+
+# Primeiros Passos {background-image="figs/muse-led-blink.gif" background-size="contain" background-opacity="0.2" auto-animate="true"}
+
+## Instalação do Software {background-color="#c5818e"}
+
+:::::: columns
+:::: {.column width="50%"}
+::: borderbox
+[![](figs/muse.png){width="100%" fig-alt="MuSe Software"}](https://gitlab.com/221e-Repositories/muse/demo_app/-/raw/main/MuseV3Viewer_Installer_v1.4.0.msi?ref_type=heads&inline=false)
+:::
+::::
+
+::: {.column width="50%"}
+**MuseV3 Viewer**
+
+-   estabelecer conexão ***Bluetooth*** entre o(s) sensor(es) e o computador
+-   verificar o estado da bateria e memória
+-   configurar parâmetros de coleta
+-   gerenciar a aquisição de dados
+:::
+::::::
+
+## Comunicação Bluetooth com o MuSe
+
+A comunicação entre o sensor e o computador é estabelecida via **bluetooth**, ou seja, por meio de uma conexão de rede direta entre os dois dispositivos em curta distância.
+
+
+**Como estabelecer a comunicação?**
+
+:::: card
+
+-   No computador, habilite o bluetooth
+    - Na barra de pesquisa do Windows, busque por **Bluetooth e outras configurações de dispositivos**
+    - Na tela de **Bluetooth e dispositivos > Dispositivos**, habilite o bluetooth caso esteja desativo
+
+::::
+
+##
+
+:::{.card}
+Enquanto o software estiver sendo utilizado (e.g., para definir a frequência de amostragem ou o fundo de escala para cada sensor), é importante que o **bluetooth** permaneça ativo no computador.
+
+::: borderbox
+![](figs/step-bluetooth-pc.png){fig-align="center" width="100%" fig-alt="Habilitando o bluetooth no computador"}
+:::
+
+:::
+
+
+##
+
+:::{.card}
+- No computador, abra o **MuseV3 Viewer**
+
+::: borderbox
+![](figs/step-muse-viewer.png){fig-align="center" width="80%" fig-alt="Interface do MuseV3 Viewer"}
+:::
+
+:::
+
+##
+
+:::{.card}
+- Na tela de comunicação via bluetooth (**BLE**) do **MuseV3 Viewer**, clique no botão **Search** para buscar por dispositivos
+
+::: borderbox
+![](figs/step-muse-viewer-search.png){fig-align="center" width="80%" fig-alt="Buscando por dispositivos"}
+:::
+
+:::
+
+## 
+
+<br>
+
+::: {.callout-caution collapse="true"}
+## Atenção
+A comunicação com o **MuSe** deve ser estabelecida diretamente pelo software **MuseV3 Viewer**. Então, o bluetooth integrado do computador não deve ser utilizado para o pareamento.
+:::
+
+::: {.callout-caution collapse="true"}
+## Atenção
+A comunicação deve ser estabelecida com o **MuSe** ligado. Se o dispositivo não estiver ligado, o aplicativo não conseguirá identificá-lo.
+:::
+
+::: {.callout-important collapse="true"}
+## Observação
+O software pode identificar outros dispositivos com pareamento bluetooth que estiverem próximos.
+:::
+
+##
+
+:::{.card}
+- No painel **Device Enumeration**, serão listados todos os dispositivos **MuSe** ligados (nomeados como **muse_v3**)
+
+
+::: borderbox
+![](figs/step-muse-viewer-enumeration.png){fig-align="center" width="80%" fig-alt="Dispositivos encontrados pelo software"}
+:::
+
+:::
+
+
+##
+
+:::{.card}
+- Clique no dispositivo listado e, em seguida, no botão **Connect**
+
+::: borderbox
+![](figs/step-muse-viewer-connect.png){fig-align="center" width="80%" fig-alt="Fazendo a conexão com dispositivo encontrado"}
+:::
+
+:::
+
+
+
+##
+
+:::{.card}
+- Se a conexão foi bem sucedida, o dispositivo será listado no painel **Connected Devices** e as informações da IMU serão apresentadas
+
+::: borderbox
+![](figs/step-muse-viewer-info.png){fig-align="center" width="75%" fig-alt="Dispositivos conectados via bluetooth"}
+:::
+
+:::
+
+
+## Configurações: Renomeação
+
+<br>
+
+Como todos os dispositivos vêm identificados como **muse_v3**, pode ser útil renomeá-los para garantir padronização.
+
+
+<br>
+
+Em caso de coletas com mais de um dispositivo, isso pode facilitar a identificação de cada dispositivo posteriormente.
+
+
+##
+
+**Como renomear o MuSe?** 
+
+:::{.card}
+- Nas configurações gerais (**General**) do painel **Settings**, verificar o nome atual do MuSe, clicando no botão **Get Name** 
+
+::: borderbox
+![](figs/step-get-name.gif){fig-align="center" width="70%" fig-alt="Verificando nome atual do dispositivo"}
+:::
+
+:::
+
+##
+
+:::{.card}
+- No campo de texto **New Device Name**, digitar o novo nome de identificação do MuSe e clicar no botão **Set Name**
+
+::: borderbox
+![](figs/step-set-name.gif){fig-align="center" width="70%" fig-alt="Renomeando dispositivo"}
+:::
+
+:::
+
+##
+
+::: {.callout-caution collapse="true"}
+## Atenção
+Uma vez feita a renomeação do dispositivo, é importante verificar se o nome foi atribuído corretamente.
+:::
+
+::: {.callout-caution collapse="true"}
+## Atenção
+Uma vez feita a renomeação, o dispositivo passará a ser identificado com o nome dado.
+
+::: borderbox
+![](figs/step-new-name.png){fig-align="center" width="95%" fig-alt="Buscando dispositivo renomeado"}
+:::
+:::
+
+## Configurações: Atualização do tempo
+
+Pode ser útil atualizar o tempo do sistema para que os registros de **log** possam ser feitos mais corretamente. 
+
+::: borderbox
+![](figs/step-timestamp.gif){fig-align="center" width="60%" fig-alt="Estampa de tempo padrão"}
+:::
+
+##
+
+:::{.card}
+- Nas configurações gerais (**General**) do painel **Settings**, clicar no botão **Set Date/Time**
+
+::: borderbox
+![](figs/step-set-timestamp.gif){fig-align="center" width="70%" fig-alt="Definindo tempo de referência"}
+:::
+
+:::
+
+## 
+:::{.callout-caution collapse="true"}
+## Atenção
+Observe que, mesmo fazendo essa configuração, haverá uma diferença de cinco horas em relação ao fuso horário UTC-3.
+
+::: borderbox
+![](figs/step-diff-time.png){fig-align="center" width="70%" fig-alt="Diferença de horário"}
+:::
+
+:::
+
+# Boas Práticas de Aquisição
+
+## 
+
+::: card
+-   Posicionar a IMU em algum ponto anatômico de referência
+-   Manter a IMU bem alinhada ao segmento corporal
+-   Padronizar a orientação dos eixos
+-   Fixar bem a IMU ao membro
+-   Escolher uma frequência de amostragem adequada
+-   Testar e, se necessário, ajustar a escala de cada sensor
+-   Nomear de forma padronizada os arquivos dos sinais coletados
+:::
+
+## 
+
+::: card
+-   Salvar os arquivos dos sinais coletados em diretório(s) estruturado(s)
+-   Verificar se realmente algum sinal foi coletado
+    -   **abrir** o arquivo para verificar sua integridade e se houve realmente algum registro no arquivo
+    -   **visualizar** os sinais para verificar se foram realmente coletados de forma adequada
+:::
+
+## Testando o Acelerômetro da IMU
+
+::: borderbox
+[![](figs/cheatsheet_acc.png){fig-align="center" width="85%" fig-alt="CheatSheet"}](https://doi.org/10.5281/zenodo.4763720)
+:::
