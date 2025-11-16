@@ -200,7 +200,7 @@ Pode ser útil atualizar o tempo do sistema para que os registros de **log** pos
 ![](figs/step-timestamp.gif){fig-align="center" width="60%" fig-alt="Estampa de tempo padrão"}
 :::
 
-## Configurações: Definição do Fundo de Escala
+##
 
 :::{.card}
 - Nas configurações gerais (**General**) do painel **Settings**, clicar no botão **Set Date/Time**
@@ -212,6 +212,7 @@ Pode ser útil atualizar o tempo do sistema para que os registros de **log** pos
 :::
 
 ## 
+
 :::{.callout-caution collapse="true"}
 ## Atenção
 Observe que, mesmo fazendo essa configuração, haverá uma diferença de cinco horas em relação ao fuso horário UTC-3.
@@ -222,7 +223,50 @@ Observe que, mesmo fazendo essa configuração, haverá uma diferença de cinco 
 
 :::
 
+## Configurações: Definição da Escala
+
+Definir o fundo de escala dos sensores é fundamental para evitar a saturação dos sinais, evitando a perda de dados.
+
+
+**Qual fundo de escala definir para cada sensor?**
+
+:::{.card}
+A escolha da sensibilidade adequada deve ser feita a partir de um teste prévio. Primeiro, registra-se um movimento com o menor fundo de escala configurado para cada sensor. Depois, analisa-se a forma de onda para identificar possíveis saturações. Caso ocorram, aumenta-se gradualmente o fundo de escala até que os picos dos diferentes sinais fiquem dentro da faixa mensurável de cada sensor.
+:::
+
+##
+
+:::{.callout-caution collapse="true"}
+## Atenção
+Configurar corretamente o fundo de escala evita saturação dos sinais e previne tanto a perda dos sinais como o retrabalho de ter que coletar tudo novamente. Então, tenha esse cuidado de configurar a escala dos sensores no início de cada coleta.
+:::
+
+<br>
+
+**Como definir o fundo de escala?**
+
+:::{.card}
+- Em **Config** do painel **Settings**, verificar o fundo de escala definido para cada um dos sensores, clicando no botão **Get Full Scale** 
+:::
+
+##
+
+:::{.card}
+::: borderbox
+![](figs/step-get-full-scale.gif){fig-align="center" width="100%" fig-alt="Obtendo o fundo de escala de cada sensor"}
+:::
+:::
+
 ## 
+
+:::{.card}
+- Em cada caixa de combinação referente a cada sensor, defina o fundo de escala mais adequado e, então, clique em **Set Full Scale** 
+
+::: borderbox
+![](figs/step-set-full-scale.gif){fig-align="center" width="65%" fig-alt="Definindo o fundo de escala de cada sensor"}
+:::
+
+:::
 
 # Boas Práticas de Aquisição de Sinais Inerciais
 
