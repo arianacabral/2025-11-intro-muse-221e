@@ -385,3 +385,5 @@ Para obter o arquivo salvo no armazenamento interno do MuSe, é necessário:
 ::: borderbox
 [![](figs/cheatsheet_acc.png){fig-align="center" width="85%" fig-alt="CheatSheet"}](https://doi.org/10.5281/zenodo.4763720)
 :::
+
+## {background-image="figs/end.gif" background-size="cover"}
