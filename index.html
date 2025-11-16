@@ -306,7 +306,7 @@
 <p><br></p>
 <p>Como todos os dispositivos vêm identificados como <strong>muse_v3</strong>, pode ser útil renomeá-los para garantir padronização.</p>
 <p><br></p>
-<p>Em caso de coletas com mais de um dispositivo, isso pode facilitar a identificação de cada dispositivo posteriormente.</p>
+<p>Em caso de coletas com mais de um dispositivo, isso pode facilitar a identificação de cada dispositivo durante o posicionamento das IMUs.</p>
 </section>
 <section id="section-7" class="slide level2">
 <h2></h2>
@@ -376,7 +376,7 @@
 </div>
 </section>
 <section id="configurações-atualização-do-tempo" class="slide level2">
-<h2>Configurações: Atualização do tempo</h2>
+<h2>Configurações: Atualização do Tempo</h2>
 <p>Pode ser útil atualizar o tempo do sistema para que os registros de <strong>log</strong> possam ser feitos mais corretamente.</p>
 <div class="borderbox">
 <div class="quarto-figure quarto-figure-center">
@@ -496,8 +496,8 @@
 <p>Para evitar <strong><em>aliasing</em></strong>, a frequência de amostragem deve ser pelo menos o dobro da maior frequência presente no sinal.</p>
 </div>
 </section>
-<section id="modo-streaming" class="slide level2">
-<h2>Modo <em>Streaming</em></h2>
+<section id="utilização-do-modo-streaming" class="slide level2">
+<h2>Utilização do Modo <em>Streaming</em></h2>
 <p>Antes de iniciar a coleta oficial, é importante visualizar os sinais para garantir, por exemplo, que o fundo de escala está adequado.</p>
 <div class="card">
 <p>Para isso, pode-se utilizar o <strong>modo streaming</strong> do MuSe. Assim, é necessário:</p>
@@ -518,7 +518,58 @@
 <div class="borderbox">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="figs/step-stream.gif" class="quarto-figure quarto-figure-center" style="width:75.0%" alt="Definindo o fundo de escala de cada sensor"></p>
+<p><img data-src="figs/step-stream.gif" class="quarto-figure quarto-figure-center" style="width:75.0%" alt="Visualizando os sinais na tela"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="utilização-do-modo-log" class="slide level2">
+<h2>Utilização do Modo <em>Log</em></h2>
+<div class="card">
+<p>Para registar os sinais em um arquivo, deve-se utilizar o modo de <strong><em>log</em></strong>. Assim, é necessário:</p>
+<ul>
+<li>No painel <strong>Acquisition</strong> da aba <strong>Data</strong>, selecionar as variáveis desejadas disponíveis em <strong>Data Mode</strong></li>
+<li>Selecionar a frequência de amostragem no campo <strong>Freq</strong></li>
+<li>Clicar no botão <strong>Log</strong> para iniciar o registro dos sinais em um arquivo de texto no armazenamento interno</li>
+</ul>
+<p>Para finalizar o registro, basta</p>
+<ul>
+<li>Clicar no botão <strong>Stop</strong></li>
+</ul>
+</div>
+</section>
+<section id="section-16" class="slide level2">
+<h2></h2>
+<div class="card">
+<div class="borderbox">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/step-log.gif" class="quarto-figure quarto-figure-center" style="width:100.0%" alt="Registrando os sinais em um arquivo interno"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="obtenção-dos-arquivos" class="slide level2">
+<h2>Obtenção dos Arquivos</h2>
+<div class="card">
+<p>Para obter o arquivo salvo no armazenamento interno do MuSe, é necessário:</p>
+<ul>
+<li>No painel <strong>Download</strong> da aba <strong>Data</strong>, listar os arquivos armazenados, clicando no botão <strong>Update List</strong></li>
+<li>Selecionar o arquivo de interesse</li>
+<li>Clicar no botão <strong>Save File</strong></li>
+<li>Escolher o diretório no computador onde o arquivo será salvo</li>
+</ul>
+</div>
+</section>
+<section id="section-17" class="slide level2">
+<h2></h2>
+<div class="card">
+<div class="borderbox">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/step-get-file.gif" class="quarto-figure quarto-figure-center" style="width:100.0%" alt="Obtendo o arquivo do armazenamento interno do dispositivo"></p>
 </figure>
 </div>
 </div>
@@ -529,7 +580,7 @@
 <h1>Boas Práticas de Aquisição de Sinais Inerciais</h1>
 
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <div class="card">
 <ul>
@@ -537,18 +588,21 @@
 <li>Manter a IMU bem alinhada ao segmento corporal</li>
 <li>Padronizar a orientação dos eixos</li>
 <li>Fixar bem a IMU ao membro</li>
-<li>Escolher uma frequência de amostragem adequada</li>
+<li>Não realizar a aquisição de sinais com o dispositivo com a bateria em nível baixo</li>
+<li>Não realizar a aquisição de sinais enquanto a bateria do dispositivo estiver sendo recarregada</li>
+<li>Verificar se há memória disponível para um novo registro sem sobrescrever registros anteriores</li>
 <li>Testar e, se necessário, ajustar a escala de cada sensor</li>
-<li>Nomear de forma padronizada os arquivos dos sinais coletados</li>
 </ul>
 </div>
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <div class="card">
 <ul>
-<li>Salvar os arquivos dos sinais coletados em diretório(s) estruturado(s)</li>
-<li>Verificar se realmente algum sinal foi coletado
+<li>Escolher uma frequência de amostragem adequada</li>
+<li>Nomear de forma padronizada o(s) arquivo(s) obtido(s) do armazenamento interno do(s) dispositivo(s)</li>
+<li>Salvar o(s) arquivo(s) dos sinais coletados em diretório(s) estruturado(s)</li>
+<li>Verificar se realmente algum sinal foi registrado no arquivo gerado
 <ul>
 <li><strong>abrir</strong> o arquivo para verificar sua integridade e se houve realmente algum registro no arquivo</li>
 <li><strong>visualizar</strong> os sinais para verificar se foram realmente coletados de forma adequada</li>

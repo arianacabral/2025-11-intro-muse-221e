@@ -149,7 +149,7 @@ Como todos os dispositivos vêm identificados como **muse_v3**, pode ser útil r
 
 <br>
 
-Em caso de coletas com mais de um dispositivo, isso pode facilitar a identificação de cada dispositivo posteriormente.
+Em caso de coletas com mais de um dispositivo, isso pode facilitar a identificação de cada dispositivo durante o posicionamento das IMUs.
 
 
 ##
@@ -192,7 +192,7 @@ Uma vez feita a renomeação, o dispositivo passará a ser identificado com o no
 :::
 :::
 
-## Configurações: Atualização do tempo
+## Configurações: Atualização do Tempo
 
 Pode ser útil atualizar o tempo do sistema para que os registros de **log** possam ser feitos mais corretamente. 
 
@@ -281,7 +281,7 @@ Para registrar os sinais com uma boa representação de sua forma de onda e de s
 Para evitar ***aliasing***, a frequência de amostragem deve ser pelo menos o dobro da maior frequência presente no sinal.
 :::
 
-## Modo *Streaming*
+## Utilização do Modo *Streaming*
 
 Antes de iniciar a coleta oficial, é importante visualizar os sinais para garantir, por exemplo, que o fundo de escala está adequado. 
 
@@ -303,8 +303,54 @@ Para finalizar, basta
 - Clicar no botão **Stop**
 
 ::: borderbox
-![](figs/step-stream.gif){fig-align="center" width="75%" fig-alt="Definindo o fundo de escala de cada sensor"}
+![](figs/step-stream.gif){fig-align="center" width="75%" fig-alt="Visualizando os sinais na tela"}
 :::
+
+:::
+
+## Utilização do Modo *Log*
+
+:::{.card}
+Para registar os sinais em um arquivo, deve-se utilizar o modo de ***log***. Assim, é necessário:
+
+- No painel **Acquisition** da aba **Data**, selecionar as variáveis desejadas disponíveis em **Data Mode**
+- Selecionar a frequência de amostragem no campo **Freq**
+- Clicar no botão **Log** para iniciar o registro dos sinais em um arquivo de texto no armazenamento interno
+
+Para finalizar o registro, basta
+
+- Clicar no botão **Stop**
+
+:::
+
+##
+
+:::{.card}
+::: borderbox
+![](figs/step-log.gif){fig-align="center" width="100%" fig-alt="Registrando os sinais em um arquivo interno"}
+:::
+:::
+
+## Obtenção dos Arquivos
+
+:::{.card}
+
+Para obter o arquivo salvo no armazenamento interno do MuSe, é necessário:
+
+- No painel **Download** da aba **Data**, listar os arquivos armazenados, clicando no botão **Update List**
+- Selecionar o arquivo de interesse
+- Clicar no botão **Save File**
+- Escolher o diretório no computador onde o arquivo será salvo
+
+:::
+
+## 
+
+:::{.card}
+::: borderbox
+![](figs/step-get-file.gif){fig-align="center" width="100%" fig-alt="Obtendo o arquivo do armazenamento interno do dispositivo"}
+:::
+
 
 :::
 
@@ -317,16 +363,19 @@ Para finalizar, basta
 -   Manter a IMU bem alinhada ao segmento corporal
 -   Padronizar a orientação dos eixos
 -   Fixar bem a IMU ao membro
--   Escolher uma frequência de amostragem adequada
+-   Não realizar a aquisição de sinais com o dispositivo com a bateria em nível baixo
+-   Não realizar a aquisição de sinais enquanto a bateria do dispositivo estiver sendo recarregada
+-   Verificar se há memória disponível para um novo registro sem sobrescrever registros anteriores
 -   Testar e, se necessário, ajustar a escala de cada sensor
--   Nomear de forma padronizada os arquivos dos sinais coletados
 :::
 
 ## 
 
 ::: card
--   Salvar os arquivos dos sinais coletados em diretório(s) estruturado(s)
--   Verificar se realmente algum sinal foi coletado
+-   Escolher uma frequência de amostragem adequada
+-   Nomear de forma padronizada o(s) arquivo(s) obtido(s) do armazenamento interno do(s) dispositivo(s)
+-   Salvar o(s) arquivo(s) dos sinais coletados em diretório(s) estruturado(s)
+-   Verificar se realmente algum sinal foi registrado no arquivo gerado
     -   **abrir** o arquivo para verificar sua integridade e se houve realmente algum registro no arquivo
     -   **visualizar** os sinais para verificar se foram realmente coletados de forma adequada
 :::
