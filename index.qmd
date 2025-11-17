@@ -215,7 +215,7 @@ Pode ser útil atualizar o tempo do sistema para que os registros de **log** pos
 
 :::{.callout-caution collapse="true"}
 ## Atenção
-Observe que, mesmo fazendo essa configuração, haverá uma diferença de cinco horas em relação ao fuso horário UTC-3.
+Observe que, mesmo fazendo essa configuração, haverá uma diferença de três horas em relação ao fuso horário UTC-3.
 
 ::: borderbox
 ![](figs/step-diff-time.png){fig-align="center" width="70%" fig-alt="Diferença de horário"}
